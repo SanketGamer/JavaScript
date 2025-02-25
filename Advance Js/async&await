@@ -1,0 +1,17 @@
+//async&await-> async functions always return a promise.If you return a promise, await waits for it to resolve and gives you the result.await can only be used inside an async function.
+//it is the most cleaner way to write asynchronous operation
+let duration=2000
+function SanketTime(duration){
+  let p=new Promise(function(resolve){
+    setTimeout(function(){
+      resolve("hi there")
+    },duration)
+  })
+  return p;
+}
+async function main(){
+  let val=await SanketTime(duration);
+  console.log(val)
+  console.log("hello")
+}
+main(duration)
