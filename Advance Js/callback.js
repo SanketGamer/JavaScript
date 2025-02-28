@@ -1,7 +1,7 @@
 //callback function
 
 //simple function
-//in there we just repeat the code that which is not good thats why something we use called callback->means the functional argument to call another function. 
+//in there we just repeat the code again & again.which is not good thats why something we use called callback->means the functional argument to call another function. 
 function sq(a){
   return a*a;
 }
