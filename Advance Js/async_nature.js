@@ -1,5 +1,5 @@
 //There are 3 types of async nature-> callback,Promise,Async&await
-//they are nothing just a syntactical sugar (to avoid repeatation of code)
+//they are nothing just a syntactical sugar (they are asynchronous operation and to avoid repeatation of code)
 
 //Syntax
 //callback
