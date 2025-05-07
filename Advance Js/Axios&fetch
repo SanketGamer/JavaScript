@@ -1,0 +1,53 @@
+
+//axios(external library) vs fetch
+
+///.then syntax
+// function main(){
+//   fetch("https://jsonplaceholder.typicode.com/todos/1")
+//   .then(async function(res){
+//     const json = await res.json();
+//     console.log(json)
+//   })
+//   .catch(error => {
+//     console.error('Error:', error);
+//   });
+// }
+
+//async & await syntax sligthly cleaner than .then
+const axios=require("axios")
+
+//POST
+// async function main(){
+//   const res=await fetch("https://jsonplaceholder.typicode.com/todos/1",{
+//       method:"POST",
+//         body:{
+//         "username":"hello0",
+//          "Password":"123456" 
+//         },
+//         headers:{
+//         "Authorization":"Bearer token"
+//         }
+//   })
+//   const json=await res.json();
+//   console.log(json)
+// }
+
+//more cleaner
+async function main(){
+  const res=await axios.post(" https://httpdump.app/dumps/60ba86ef-dc03-4aed-b1dc-723e4bbef0d6",{
+    //body(2nd argument)
+    "username":"hello0",
+       "Password":"123456" 
+  },{
+    //2rd argument
+    headers:{
+      "Authorization":"Bearer token"
+      }
+  }
+  )
+  console.log(res.data)
+}
+main();
+
+
+
